@@ -92,10 +92,10 @@ const formatMovementDate = function (date, locale) {
   if (daysPassed === 1) return "Yesterday";
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
-  // const day = `${date.getDate()}`.padStart(2, 0);
-  // const month = `${date.getMonth() + 1}`.padStart(2, 0);
-  // const year = date.getFullYear();
-  // return `${day}/${month}/${year}`;
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
@@ -203,7 +203,7 @@ const startLogOutTimer = function () {
     time--;
   };
 
-  // Set time to 5 minutes
+  // Set time to 3 minutes
   let time = 120;
 
   // Call the timer every second
@@ -218,9 +218,9 @@ const startLogOutTimer = function () {
 let currentAccount, timer;
 
 // FAKE ALWAYS LOGGED IN
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 100;
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
 
 btnLogin.addEventListener("click", function (e) {
   // Prevent form from submitting
@@ -256,13 +256,7 @@ btnLogin.addEventListener("click", function (e) {
       options
     ).format(now);
 
-    // const day = `${now.getDate()}`.padStart(2, 0);
-    // const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    // const year = now.getFullYear();
-    // const hour = `${now.getHours()}`.padStart(2, 0);
-    // const min = `${now.getMinutes()}`.padStart(2, 0);
-    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
-
+    
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
@@ -363,6 +357,6 @@ btnSort.addEventListener("click", function (e) {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
-
+console.log('jijfdndfknjkvbfd')
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
