@@ -1,4 +1,4 @@
-first user name  => mb
-password         => 1111
+first user name  => mb 
+first user password => 1111
 second user name => j
-password         => 2222
+second user password => 2222
